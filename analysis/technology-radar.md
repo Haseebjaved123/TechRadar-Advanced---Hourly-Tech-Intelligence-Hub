@@ -1,39 +1,35 @@
 # 🎯 Technology Radar
 
-*Last updated: September 2, 2025 13:00 UTC*
+*Last updated: September 02, 2025 16:31 UTC*
 
 ## Adopt
 
-- **Python** 😊 (45 mentions, 0.82 sentiment)
-- **JavaScript** 😊 (38 mentions, 0.79 sentiment)
-- **Docker** 😊 (32 mentions, 0.76 sentiment)
-- **Kubernetes** 😊 (28 mentions, 0.74 sentiment)
-- **AWS** 😊 (25 mentions, 0.73 sentiment)
-- **React** 😊 (22 mentions, 0.71 sentiment)
+- **git** 😊 (54 mentions, 0.71 sentiment)
+- **react** 😊 (22 mentions, 0.75 sentiment)
 
 ## Trial
 
-- **GPT-5** 😊 (18 mentions, 0.85 sentiment)
-- **Quantum Computing** 😊 (15 mentions, 0.92 sentiment)
-- **Neuromorphic Chips** 😊 (12 mentions, 0.88 sentiment)
-- **AGI** 😊 (10 mentions, 0.82 sentiment)
-- **Edge Computing** 😊 (8 mentions, 0.78 sentiment)
-- **5G** 😊 (7 mentions, 0.75 sentiment)
+- **github** 😊 (22 mentions, 0.62 sentiment)
 
 ## Assess
 
-- **Web3** 😐 (6 mentions, 0.45 sentiment)
-- **Blockchain** 😐 (5 mentions, 0.48 sentiment)
-- **AR/VR** 😐 (4 mentions, 0.52 sentiment)
-- **IoT** 😐 (3 mentions, 0.58 sentiment)
-- **6G** 😐 (2 mentions, 0.61 sentiment)
+- **aws** 😐 (19 mentions, 0.51 sentiment)
+- **javascript** 😐 (12 mentions, 0.51 sentiment)
+- **python** 😐 (11 mentions, 0.6 sentiment)
+- **azure** 😞 (5 mentions, 0.38 sentiment)
+- **docker** 😐 (3 mentions, 0.58 sentiment)
 
 ## Hold
 
-- **Cryptocurrency** 😞 (8 mentions, 0.42 sentiment)
-- **NFTs** 😞 (3 mentions, 0.38 sentiment)
-- **Metaverse** 😞 (2 mentions, 0.35 sentiment)
+- **pandas** 😊 (2 mentions, 1.0 sentiment)
+- **gitlab** 😊 (2 mentions, 0.81 sentiment)
+- **angular** 😊 (2 mentions, 1.0 sentiment)
+- **pytorch** 😊 (1 mentions, 0.89 sentiment)
+- **jenkins** 😐 (1 mentions, 0.47 sentiment)
+- **numpy** 😐 (1 mentions, 0.5 sentiment)
+- **scikit-learn** 😊 (1 mentions, 1.0 sentiment)
+- **prometheus** 😊 (1 mentions, 0.9 sentiment)
+- **grafana** 😊 (1 mentions, 0.9 sentiment)
+- **node.js** 😊 (1 mentions, 0.75 sentiment)
+- **terraform** 😐 (1 mentions, 0.5 sentiment)
 
----
-
-*The Technology Radar is updated daily based on mention frequency, sentiment analysis, and industry adoption trends.*

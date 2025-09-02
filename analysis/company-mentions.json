@@ -1,121 +1,631 @@
 {
-  "OpenAI": {
-    "total_mentions": 27,
-    "positive_mentions": 22,
-    "negative_mentions": 2,
-    "avg_sentiment": 0.82,
+  "Twitter": {
+    "total_mentions": 17,
+    "positive_mentions": 10,
+    "negative_mentions": 1,
+    "avg_sentiment": 0.61,
     "recent_articles": [
       {
-        "title": "OpenAI Announces GPT-5 Architecture with Revolutionary Efficiency",
-        "url": "https://openai.com/blog/gpt-5-announcement",
-        "sentiment": 0.85,
-        "date": "2025-09-02T13:00:00Z"
+        "title": "Most Frequently Asked Questions About Affiliate Marketing",
+        "url": "https://techncruncher.blogspot.com/2022/06/most-frequently-asked-questions-about.html",
+        "sentiment": 1.0,
+        "date": "2025-09-02T16:31:25.320770+00:00"
       },
       {
-        "title": "OpenAI Releases New Safety Guidelines for AGI Development",
-        "url": "https://openai.com/blog/agi-safety-guidelines",
-        "sentiment": 0.78,
-        "date": "2025-09-02T12:30:00Z"
+        "title": "What is Blockchain: Everything You Need to Know (2022)",
+        "url": "https://techncruncher.blogspot.com/2022/04/what-is-blockchain-everything-you-need.html",
+        "sentiment": 0.64,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "Sellfy Review 2022: How Good Is This Ecommerce Platform?",
+        "url": "https://techncruncher.blogspot.com/2022/03/sellfy-review-2022-how-good-is-this.html",
+        "sentiment": 0.89,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "Twitter Whistleblower Complaint: The TL;DR Version",
+        "url": "https://threatpost.com/twitter-whistleblower-tldr-version/180472/",
+        "sentiment": 0.0,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "Creating a Twitter Sentiment Analysis NLP Model For Video Games",
+        "url": "https://dev.to/lucirie/creating-a-twitter-sentiment-analysis-nlp-model-for-video-games-2377",
+        "sentiment": 0.5,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      }
+    ]
+  },
+  "Linux": {
+    "total_mentions": 21,
+    "positive_mentions": 13,
+    "negative_mentions": 1,
+    "avg_sentiment": 0.77,
+    "recent_articles": [
+      {
+        "title": "Run a virtual conference using only open source tools",
+        "url": "https://opensource.com/article/23/4/open-source-tools-virtual-conference",
+        "sentiment": 0.73,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "3 key open source challenges in developing countries",
+        "url": "https://opensource.com/article/23/4/challenges-open-source-developing-countries",
+        "sentiment": 0.73,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "Test your Drupal website with Cypress",
+        "url": "https://opensource.com/article/23/4/website-test-drupal-cypress",
+        "sentiment": 0.75,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "5 open ways to help UX designers and developers collaborate better",
+        "url": "https://opensource.com/article/23/4/designers-developers-collaborate",
+        "sentiment": 0.75,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "What's new in GNOME 44?",
+        "url": "https://opensource.com/article/23/4/linux-gnome-44-features",
+        "sentiment": 0.89,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      }
+    ]
+  },
+  "Amazon": {
+    "total_mentions": 10,
+    "positive_mentions": 6,
+    "negative_mentions": 1,
+    "avg_sentiment": 0.93,
+    "recent_articles": [
+      {
+        "title": "Running Docker MCP Toolkit with LM Studio",
+        "url": "https://dev.to/ajeetraina/running-docker-mcp-toolkit-with-lm-studio-53k2",
+        "sentiment": 1.0,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "Umamusume September 2025 Banner Schedule Adds Seiun Sky",
+        "url": "https://www.siliconera.com/umamusume-september-2025-banner-schedule-adds-seiun-sky/?utm_source=rss&utm_medium=rss&utm_campaign=umamusume-september-2025-banner-schedule-adds-seiun-sky",
+        "sentiment": 1.0,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "Kunon the Sorcerer Can See Highlights Ingenuity and Hard Work",
+        "url": "https://www.siliconera.com/kunon-the-sorcerer-can-see-highlights-ingenuity-and-hard-work/?utm_source=rss&utm_medium=rss&utm_campaign=kunon-the-sorcerer-can-see-highlights-ingenuity-and-hard-work",
+        "sentiment": 1.0,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "Mechanical Marie Succeeds Because the Manga Gets so Goofy",
+        "url": "https://www.siliconera.com/mechanical-marie-succeeds-because-the-manga-gets-so-goofy/?utm_source=rss&utm_medium=rss&utm_campaign=mechanical-marie-succeeds-because-the-manga-gets-so-goofy",
+        "sentiment": 0.67,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "TOP 11 AI MARKETING TOOLS YOU SHOULD USE (Updated 2022)",
+        "url": "https://techncruncher.blogspot.com/2022/07/top-10-ai-marketing-tools-you-should-use.html",
+        "sentiment": 1.0,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      }
+    ]
+  },
+  "Intel": {
+    "total_mentions": 18,
+    "positive_mentions": 7,
+    "negative_mentions": 3,
+    "avg_sentiment": 0.61,
+    "recent_articles": [
+      {
+        "title": "Top 10 AI Tools in 2023 That Will Make Your Life Easier",
+        "url": "https://techncruncher.blogspot.com/2023/01/top-10-ai-tools-in-2023-that-will-make.html",
+        "sentiment": 0.8,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "Top 10 AI Content Generator & Writer Tools in 2022",
+        "url": "https://techncruncher.blogspot.com/2022/11/top-10-ai-content-generator-writer.html",
+        "sentiment": 0.9,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "TOP 11 AI MARKETING TOOLS YOU SHOULD USE (Updated 2022)",
+        "url": "https://techncruncher.blogspot.com/2022/07/top-10-ai-marketing-tools-you-should-use.html",
+        "sentiment": 1.0,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "AIDEFEND: Free AI defense framework",
+        "url": "https://www.helpnetsecurity.com/2025/09/01/aidefend-free-ai-defense-framework/",
+        "sentiment": 0.33,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "Cybersecurity signals: Connecting controls and incident outcomes",
+        "url": "https://www.helpnetsecurity.com/2025/09/01/cric-cybersecurity-signals/",
+        "sentiment": 0.0,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      }
+    ]
+  },
+  "Salesforce": {
+    "total_mentions": 6,
+    "positive_mentions": 1,
+    "negative_mentions": 2,
+    "avg_sentiment": 0.38,
+    "recent_articles": [
+      {
+        "title": "Salesforce builds ‘flight simulator’ for AI agents as 95% of enterprise pilots fail to reach production",
+        "url": "https://venturebeat.com/ai/salesforce-builds-flight-simulator-for-ai-agents-as-95-of-enterprise-pilots-fail-to-reach-production/",
+        "sentiment": 0.5,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "The Ongoing Fallout from a Breach at AI Chatbot Maker Salesloft",
+        "url": "https://krebsonsecurity.com/2025/09/the-ongoing-fallout-from-a-breach-at-ai-chatbot-maker-salesloft/",
+        "sentiment": 0.0,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "Agentic AI News Digest for August 25-29",
+        "url": "https://dev.to/alexmercedcoder/agentic-ai-news-digest-for-august-25-29-2agj",
+        "sentiment": 0.5,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "Sellfy Review 2022: How Good Is This Ecommerce Platform?",
+        "url": "https://techncruncher.blogspot.com/2022/03/sellfy-review-2022-how-good-is-this.html",
+        "sentiment": 0.89,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "Zscaler, Palo Alto Networks, SpyCloud among the affected by Salesloft breach",
+        "url": "https://www.helpnetsecurity.com/2025/09/02/zscaler-palo-alto-networks-spycloud-among-the-affected-by-salesloft-breach/",
+        "sentiment": 0.0,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      }
+    ]
+  },
+  "Docker": {
+    "total_mentions": 3,
+    "positive_mentions": 1,
+    "negative_mentions": 1,
+    "avg_sentiment": 0.58,
+    "recent_articles": [
+      {
+        "title": "Dockerize Your Integration Tests with Testcontainers",
+        "url": "https://medium.com/cloudnativepub/dockerize-your-integration-tests-with-testcontainers-218440425537",
+        "sentiment": 0.5,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "Running Docker MCP Toolkit with LM Studio",
+        "url": "https://dev.to/ajeetraina/running-docker-mcp-toolkit-with-lm-studio-53k2",
+        "sentiment": 1.0,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "What the GitGuardian secrets sprawl report reveals about leaked credentials",
+        "url": "https://www.helpnetsecurity.com/2025/09/02/gitguardian-secrets-sprawl-video/",
+        "sentiment": 0.25,
+        "date": "2025-09-02T16:31:25.320770+00:00"
       }
     ]
   },
   "Google": {
-    "total_mentions": 22,
-    "positive_mentions": 18,
-    "negative_mentions": 1,
-    "avg_sentiment": 0.79,
+    "total_mentions": 40,
+    "positive_mentions": 23,
+    "negative_mentions": 5,
+    "avg_sentiment": 0.8,
     "recent_articles": [
       {
-        "title": "Google's New Neuromorphic Chip Shows 1000x Energy Efficiency",
-        "url": "https://research.google/neuromorphic-breakthrough",
-        "sentiment": 0.88,
-        "date": "2025-09-02T12:15:00Z"
+        "title": "My 6 Top Picks for the Best Video Conferencing Software in 2025",
+        "url": "https://www.techrepublic.com/article/best-video-conferencing-software/",
+        "sentiment": 0.5,
+        "date": "2025-09-02T16:31:25.320770+00:00"
       },
       {
-        "title": "Google Quantum Supremacy 2.0 Achieved",
-        "url": "https://research.google/quantum-supremacy-2",
-        "sentiment": 0.85,
-        "date": "2025-09-02T11:45:00Z"
+        "title": "AI-Powered UX/UI Design: A Breakthrough in Modern App Design",
+        "url": "https://www.sitepoint.com/ai-powered-ux-ui-design/?utm_source=rss",
+        "sentiment": 1.0,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "What is Generative Engine Optimization (GEO)?",
+        "url": "https://www.sitepoint.com/generative-engine-optimization/?utm_source=rss",
+        "sentiment": 1.0,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "Google Pixel 10's UFS 4.0 Upgrade Doesn't Matter as Much as You Think",
+        "url": "https://www.androidheadlines.com/2025/09/google-pixel-10-ufs-4-0-3-1-storage-speed-benchmark.html",
+        "sentiment": 1.0,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "Phone Comparisons: Google Pixel 10 vs Samsung Galaxy S25",
+        "url": "https://www.androidheadlines.com/phone-comparisons-google-pixel-10-vs-samsung-galaxy-s25",
+        "sentiment": 0.5,
+        "date": "2025-09-02T16:31:25.320770+00:00"
       }
     ]
   },
-  "Tesla": {
-    "total_mentions": 16,
-    "positive_mentions": 13,
-    "negative_mentions": 1,
+  "Openai": {
+    "total_mentions": 8,
+    "positive_mentions": 5,
+    "negative_mentions": 2,
     "avg_sentiment": 0.76,
     "recent_articles": [
       {
-        "title": "Tesla's Optimus Robot Achieves AGI-Level Task Planning",
-        "url": "https://techcrunch.com/tesla-optimus-agi",
-        "sentiment": 0.88,
-        "date": "2025-09-02T12:30:00Z"
+        "title": "The Ongoing Fallout from a Breach at AI Chatbot Maker Salesloft",
+        "url": "https://krebsonsecurity.com/2025/09/the-ongoing-fallout-from-a-breach-at-ai-chatbot-maker-salesloft/",
+        "sentiment": 0.0,
+        "date": "2025-09-02T16:31:25.320770+00:00"
       },
       {
-        "title": "Tesla FSD Beta 12.5 Shows Major Improvements",
-        "url": "https://tesla.com/fsd-beta-12-5",
-        "sentiment": 0.72,
-        "date": "2025-09-02T11:20:00Z"
+        "title": "ChatGPT to tell parents when their child is in 'acute distress'",
+        "url": "https://www.bbc.com/news/articles/cg505mn84ydo?at_medium=RSS&at_campaign=rss",
+        "sentiment": 1.0,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "Top 10 AI Tools in 2023 That Will Make Your Life Easier",
+        "url": "https://techncruncher.blogspot.com/2023/01/top-10-ai-tools-in-2023-that-will-make.html",
+        "sentiment": 0.8,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "OpenAI to route sensitive conversations to GPT-5, introduce parental controls",
+        "url": "https://techcrunch.com/2025/09/02/openai-to-route-sensitive-conversations-to-gpt-5-introduce-parental-controls/",
+        "sentiment": 1.0,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "OpenAI to Build 1GW Data Centre in India Under Stargate Initiative",
+        "url": "https://www.techrepublic.com/article/news-openai-stargate-india-data-centre/",
+        "sentiment": 1.0,
+        "date": "2025-09-02T16:31:25.320770+00:00"
       }
     ]
   },
-  "Microsoft": {
-    "total_mentions": 15,
-    "positive_mentions": 12,
-    "negative_mentions": 2,
-    "avg_sentiment": 0.74,
+  "Github": {
+    "total_mentions": 22,
+    "positive_mentions": 8,
+    "negative_mentions": 0,
+    "avg_sentiment": 0.67,
     "recent_articles": [
       {
-        "title": "Microsoft Azure Quantum Expansion Announced",
-        "url": "https://azure.microsoft.com/quantum-expansion",
-        "sentiment": 0.81,
-        "date": "2025-09-02T12:00:00Z"
+        "title": "Running Docker MCP Toolkit with LM Studio",
+        "url": "https://dev.to/ajeetraina/running-docker-mcp-toolkit-with-lm-studio-53k2",
+        "sentiment": 1.0,
+        "date": "2025-09-02T16:31:25.320770+00:00"
       },
       {
-        "title": "Microsoft Copilot Gets Major AI Updates",
-        "url": "https://microsoft.com/copilot-updates",
-        "sentiment": 0.69,
-        "date": "2025-09-02T11:30:00Z"
-      }
-    ]
-  },
-  "Meta": {
-    "total_mentions": 13,
-    "positive_mentions": 9,
-    "negative_mentions": 3,
-    "avg_sentiment": 0.68,
-    "recent_articles": [
-      {
-        "title": "Meta's Llama 3.5 Release Shows Significant Improvements",
-        "url": "https://meta.com/llama-3-5-release",
-        "sentiment": 0.75,
-        "date": "2025-09-02T11:45:00Z"
+        "title": "Generate web pages from Markdown with Docsify-This",
+        "url": "https://opensource.com/article/23/5/docsify-markdown-html",
+        "sentiment": 0.83,
+        "date": "2025-09-02T16:31:25.320770+00:00"
       },
       {
-        "title": "Meta Reality Labs Faces Another Round of Layoffs",
-        "url": "https://techcrunch.com/meta-reality-labs-layoffs",
-        "sentiment": 0.45,
-        "date": "2025-09-02T10:30:00Z"
+        "title": "Vibe coding: Because who doesn’t love surprise technical debt!?",
+        "url": "https://dev.to/coderabbitai/vibe-coding-because-who-doesnt-love-surprise-technical-debt-3c3b",
+        "sentiment": 0.5,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "Vibe coding: Because who doesn’t love surprise technical debt!?",
+        "url": "https://dev.to/coderabbitai/vibe-coding-because-who-doesnt-love-surprise-technical-debt-3c3b",
+        "sentiment": 0.5,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "Vibe coding: Because who doesn’t love surprise technical debt!?",
+        "url": "https://dev.to/coderabbitai/vibe-coding-because-who-doesnt-love-surprise-technical-debt-3c3b",
+        "sentiment": 0.5,
+        "date": "2025-09-02T16:31:25.320770+00:00"
       }
     ]
   },
   "Apple": {
-    "total_mentions": 11,
-    "positive_mentions": 8,
-    "negative_mentions": 2,
-    "avg_sentiment": 0.71,
+    "total_mentions": 7,
+    "positive_mentions": 3,
+    "negative_mentions": 1,
+    "avg_sentiment": 0.57,
     "recent_articles": [
       {
-        "title": "Apple Intelligence Gets Major Privacy Updates",
-        "url": "https://apple.com/intelligence-privacy",
-        "sentiment": 0.78,
-        "date": "2025-09-02T11:15:00Z"
+        "title": "Fiio KA11 review: One of the best ways to enjoy Apple Lossless, right now!",
+        "url": "https://www.imore.com/music-movies-tv/fiio-ka11-review",
+        "sentiment": 0.0,
+        "date": "2025-09-02T16:31:25.320770+00:00"
       },
       {
-        "title": "Apple Vision Pro Sales Below Expectations",
-        "url": "https://bloomberg.com/apple-vision-pro-sales",
-        "sentiment": 0.52,
-        "date": "2025-09-02T10:45:00Z"
+        "title": "Generate web pages from Markdown with Docsify-This",
+        "url": "https://opensource.com/article/23/5/docsify-markdown-html",
+        "sentiment": 0.83,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "The UK May Be Dropping Its Backdoor Mandate",
+        "url": "https://www.schneier.com/blog/archives/2025/08/the-uk-may-be-dropping-its-backdoor-mandate.html",
+        "sentiment": 1.0,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "Apple’s Xcode 26 Beta Now Supports GPT-5 and Claude",
+        "url": "https://www.techrepublic.com/article/news-xcode-26-ai-integration-tab-redesign/",
+        "sentiment": 0.5,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "Apple’s $2,000 iPhone Fold Might Skip Face ID for Touch ID",
+        "url": "https://www.androidheadlines.com/2025/09/apples-2000-iphone-fold-might-skip-face-id-for-touch-id.html",
+        "sentiment": 0.5,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      }
+    ]
+  },
+  "Microsoft": {
+    "total_mentions": 26,
+    "positive_mentions": 8,
+    "negative_mentions": 2,
+    "avg_sentiment": 0.7,
+    "recent_articles": [
+      {
+        "title": "Navigating medical education in the era of generative AI",
+        "url": "https://www.microsoft.com/en-us/research/podcast/navigating-medical-education-in-the-era-of-generative-ai/",
+        "sentiment": 0.5,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "Top 10 AI Tools in 2023 That Will Make Your Life Easier",
+        "url": "https://techncruncher.blogspot.com/2023/01/top-10-ai-tools-in-2023-that-will-make.html",
+        "sentiment": 0.8,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "TOP 11 AI MARKETING TOOLS YOU SHOULD USE (Updated 2022)",
+        "url": "https://techncruncher.blogspot.com/2022/07/top-10-ai-marketing-tools-you-should-use.html",
+        "sentiment": 1.0,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "ProWritingAid VS Grammarly: Which Grammar Checker is Better in (2022) ?",
+        "url": "https://techncruncher.blogspot.com/2022/03/prowritingaid-vs-grammarly-which.html",
+        "sentiment": 0.71,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "My 6 Top Picks for the Best Video Conferencing Software in 2025",
+        "url": "https://www.techrepublic.com/article/best-video-conferencing-software/",
+        "sentiment": 0.5,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      }
+    ]
+  },
+  "Nvidia": {
+    "total_mentions": 4,
+    "positive_mentions": 3,
+    "negative_mentions": 1,
+    "avg_sentiment": 0.75,
+    "recent_articles": [
+      {
+        "title": "Nvidia’s $46.7B Q2 proves the platform, but its next fight is ASIC economics on inference",
+        "url": "https://venturebeat.com/ai/nvidias-strong-q2-results-cant-mask-the-asic-challenge-in-their-future/",
+        "sentiment": 1.0,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "Google may be sitting on a $900 billion gem that could disrupt Nvidia’s dominance",
+        "url": "https://www.marketwatch.com/story/google-may-be-sitting-on-a-900-billion-gem-that-could-disrupt-nvidias-dominance-20662ec6?mod=mw_rss_topstories",
+        "sentiment": 1.0,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "Canonical’s Ubuntu to be supported on NVIDIA Jetson Thor",
+        "url": "https://canonical.com//blog/nvidia-jetson-thor-ubuntu-support",
+        "sentiment": 0.0,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "I tested Nvidia's DLSS Transformer Model — my games look better, and it cost me nothing",
+        "url": "https://www.laptopmag.com/laptops/gaming-laptops-pcs/nvidia-dlss-transformer-model",
+        "sentiment": 1.0,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      }
+    ]
+  },
+  "Meta": {
+    "total_mentions": 20,
+    "positive_mentions": 4,
+    "negative_mentions": 8,
+    "avg_sentiment": 0.28,
+    "recent_articles": [
+      {
+        "title": "Cybersecurity jobs available right now: September 2, 2025",
+        "url": "https://www.helpnetsecurity.com/2025/09/02/cybersecurity-jobs-available-right-now-september-2-2025/",
+        "sentiment": 0.33,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "KillChainGraph: Researchers test machine learning framework for mapping attacker behavior",
+        "url": "https://www.helpnetsecurity.com/2025/09/01/killchaingraph-predictive-cyber-kill-chain/",
+        "sentiment": 0.5,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "AIDEFEND: Free AI defense framework",
+        "url": "https://www.helpnetsecurity.com/2025/09/01/aidefend-free-ai-defense-framework/",
+        "sentiment": 0.33,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "Boards are being told to rethink their role in cybersecurity",
+        "url": "https://www.helpnetsecurity.com/2025/09/01/google-board-cybersecurity-oversight/",
+        "sentiment": 0.25,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "Cybersecurity signals: Connecting controls and incident outcomes",
+        "url": "https://www.helpnetsecurity.com/2025/09/01/cric-cybersecurity-signals/",
+        "sentiment": 0.0,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      }
+    ]
+  },
+  "Ubuntu": {
+    "total_mentions": 6,
+    "positive_mentions": 4,
+    "negative_mentions": 2,
+    "avg_sentiment": 0.73,
+    "recent_articles": [
+      {
+        "title": "Canonical’s Ubuntu to be supported on NVIDIA Jetson Thor",
+        "url": "https://canonical.com//blog/nvidia-jetson-thor-ubuntu-support",
+        "sentiment": 0.0,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "69% of organizations in Europe believe adopting open source makes them more competitive – new Linux Foundation research",
+        "url": "https://canonical.com//blog/open-source-advantage-europe",
+        "sentiment": 1.0,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "A complete security view for every Ubuntu LTS VM on Azure",
+        "url": "https://canonical.com//blog/ubuntu-on-azure",
+        "sentiment": 0.75,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "Canonical is now a platinum member in the Open Source Robotics Alliance",
+        "url": "https://canonical.com//blog/osra-membership",
+        "sentiment": 1.0,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "What's new in GNOME 44?",
+        "url": "https://opensource.com/article/23/4/linux-gnome-44-features",
+        "sentiment": 0.89,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      }
+    ]
+  },
+  "Ibm": {
+    "total_mentions": 2,
+    "positive_mentions": 1,
+    "negative_mentions": 0,
+    "avg_sentiment": 0.57,
+    "recent_articles": [
+      {
+        "title": "Russian GRU Targeting Western Logistics Entities and Technology Companies",
+        "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-141a",
+        "sentiment": 0.5,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "What is Blockchain: Everything You Need to Know (2022)",
+        "url": "https://techncruncher.blogspot.com/2022/04/what-is-blockchain-everything-you-need.html",
+        "sentiment": 0.64,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      }
+    ]
+  },
+  "Amd": {
+    "total_mentions": 1,
+    "positive_mentions": 0,
+    "negative_mentions": 0,
+    "avg_sentiment": 0.5,
+    "recent_articles": [
+      {
+        "title": "Russian GRU Targeting Western Logistics Entities and Technology Companies",
+        "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-141a",
+        "sentiment": 0.5,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      }
+    ]
+  },
+  "Redis": {
+    "total_mentions": 2,
+    "positive_mentions": 1,
+    "negative_mentions": 0,
+    "avg_sentiment": 0.69,
+    "recent_articles": [
+      {
+        "title": "Threat Actors Chained Vulnerabilities in Ivanti Cloud Service Applications",
+        "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-022a",
+        "sentiment": 0.47,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "How to Optimize SQL Queries in High-Traffic Applications",
+        "url": "https://dev.to/dixitgurv/how-to-optimize-sql-queries-in-high-traffic-applications-52d9",
+        "sentiment": 0.9,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      }
+    ]
+  },
+  "Oracle": {
+    "total_mentions": 1,
+    "positive_mentions": 1,
+    "negative_mentions": 0,
+    "avg_sentiment": 0.9,
+    "recent_articles": [
+      {
+        "title": "How to Optimize SQL Queries in High-Traffic Applications",
+        "url": "https://dev.to/dixitgurv/how-to-optimize-sql-queries-in-high-traffic-applications-52d9",
+        "sentiment": 0.9,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      }
+    ]
+  },
+  "Apache": {
+    "total_mentions": 1,
+    "positive_mentions": 0,
+    "negative_mentions": 0,
+    "avg_sentiment": 0.5,
+    "recent_articles": [
+      {
+        "title": "Agentic AI News Digest for August 25-29",
+        "url": "https://dev.to/alexmercedcoder/agentic-ai-news-digest-for-august-25-29-2agj",
+        "sentiment": 0.5,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      }
+    ]
+  },
+  "Uber": {
+    "total_mentions": 2,
+    "positive_mentions": 2,
+    "negative_mentions": 0,
+    "avg_sentiment": 1.0,
+    "recent_articles": [
+      {
+        "title": "Top 10 AI Tools That Will Transform Your Content Creation in 2025",
+        "url": "https://techncruncher.blogspot.com/2025/01/top-10-ai-tools-that-will-transform.html",
+        "sentiment": 1.0,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      },
+      {
+        "title": "MrBeast reportedly plans to launch a phone company",
+        "url": "https://techcrunch.com/2025/09/02/mrbeast-reportedly-plans-to-launch-a-phone-company/",
+        "sentiment": 1.0,
+        "date": "2025-09-02T16:31:25.320770+00:00"
+      }
+    ]
+  },
+  "Tesla": {
+    "total_mentions": 1,
+    "positive_mentions": 0,
+    "negative_mentions": 0,
+    "avg_sentiment": 0.5,
+    "recent_articles": [
+      {
+        "title": "Tesla Dojo: the rise and fall of Elon Musk’s AI supercomputer",
+        "url": "https://techcrunch.com/2025/09/02/tesla-dojo-the-rise-and-fall-of-elon-musks-ai-supercomputer/",
+        "sentiment": 0.5,
+        "date": "2025-09-02T16:31:25.320770+00:00"
       }
     ]
   }

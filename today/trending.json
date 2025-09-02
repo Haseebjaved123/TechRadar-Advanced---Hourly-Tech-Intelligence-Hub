@@ -1,69 +1,93 @@
 {
-  "timestamp": "2025-09-02T13:00:00Z",
+  "timestamp": "2025-09-02T16:31:26.033699+00:00",
   "trending_topics": [
     {
-      "topic": "Quantum Computing",
-      "mentions": 47,
-      "change": "+45%",
-      "sentiment": 0.85,
+      "topic": "Emerging Tech",
+      "mentions": 452,
+      "change": "+4520%",
+      "sentiment": 0.6,
       "key_articles": [
-        "Room Temperature Superconductor Validated",
-        "IBM Quantum Network Expansion",
-        "Google's Quantum Supremacy 2.0"
+        "You don't want to hire \"the best engineers\"",
+        "Static sites enable a good time travel experience",
+        "X(Twitter) Shadow Bans Turkish Presidential Candidate"
       ]
     },
     {
-      "topic": "GPT-5/LLMs",
-      "mentions": 38,
-      "change": "+23%",
-      "sentiment": 0.72,
+      "topic": "Ai Ml",
+      "mentions": 279,
+      "change": "+2790%",
+      "sentiment": 0.64,
       "key_articles": [
-        "OpenAI GPT-5 Architecture Announced",
-        "Meta's Llama 3.5 Release",
-        "Google's Gemini Ultra Update"
+        "Anthropic raises $13B Series F at $183B post-money valuation",
+        "Why teach calculus in the age of AI",
+        "An LLM is a lossy encyclopedia"
       ]
     },
     {
-      "topic": "Neuromorphic Chips",
-      "mentions": 24,
-      "change": "+190%",
-      "sentiment": 0.90,
+      "topic": "Cybersecurity",
+      "mentions": 67,
+      "change": "+670%",
+      "sentiment": 0.32,
       "key_articles": [
-        "Google's 1000x Energy Efficiency Breakthrough",
-        "Intel's Loihi 3 Chip",
-        "Brain-Inspired Computing Revolution"
+        "Software commands 40% of cybersecurity budgets as gen AI attacks execute in milliseconds",
+        "Salesforce builds ‘flight simulator’ for AI agents as 95% of enterprise pilots fail to reach production",
+        "The Ongoing Fallout from a Breach at AI Chatbot Maker Salesloft"
       ]
     },
     {
-      "topic": "Web3/Blockchain",
-      "mentions": 19,
-      "change": "-12%",
-      "sentiment": 0.45,
+      "topic": "Blockchain Web3",
+      "mentions": 39,
+      "change": "+390%",
+      "sentiment": 0.7,
       "key_articles": [
-        "Ethereum Layer 2 Breakthrough",
-        "Solana's New Consensus Mechanism",
-        "DeFi Security Improvements"
+        "Enterprise data infrastructure proves resilient as Snowflake’s 32% growth defies tech slowdown fears",
+        "Affiliates Flock to ‘Soulless’ Scam Gambling Machine",
+        "Scammers Unleash Flood of Slick Online Gaming Sites"
       ]
     },
     {
-      "topic": "Robotics",
-      "mentions": 16,
-      "change": "+8%",
+      "topic": "Space Tech",
+      "mentions": 18,
+      "change": "+180%",
       "sentiment": 0.68,
       "key_articles": [
-        "Tesla Optimus AGI-Level Planning",
-        "Boston Dynamics New Robot",
-        "Robotic Surgery Advances"
+        "The Ongoing Fallout from a Breach at AI Chatbot Maker Salesloft",
+        "What is the weekly challenge in Phasmophobia?",
+        "React Labs: What We've Been Working On – June 2022"
       ]
     }
   ],
   "top_companies": [
-    {"name": "OpenAI", "mentions": 32, "sentiment": 0.78},
-    {"name": "Google", "mentions": 28, "sentiment": 0.82},
-    {"name": "Meta", "mentions": 21, "sentiment": 0.65},
-    {"name": "Microsoft", "mentions": 19, "sentiment": 0.71},
-    {"name": "Tesla", "mentions": 15, "sentiment": 0.69},
-    {"name": "Apple", "mentions": 13, "sentiment": 0.73}
+    {
+      "name": "Google",
+      "mentions": 40,
+      "sentiment": 0.69
+    },
+    {
+      "name": "Microsoft",
+      "mentions": 26,
+      "sentiment": 0.55
+    },
+    {
+      "name": "Github",
+      "mentions": 22,
+      "sentiment": 0.62
+    },
+    {
+      "name": "Linux",
+      "mentions": 21,
+      "sentiment": 0.71
+    },
+    {
+      "name": "Meta",
+      "mentions": 20,
+      "sentiment": 0.42
+    },
+    {
+      "name": "Intel",
+      "mentions": 18,
+      "sentiment": 0.57
+    }
   ],
   "emerging_technologies": [
     "DNA Storage",

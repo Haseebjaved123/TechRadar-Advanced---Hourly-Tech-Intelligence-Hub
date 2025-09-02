@@ -21,6 +21,32 @@
         "cybersecurity": 0.67
       },
       "overall_sentiment": 0.76
+    },
+    {
+      "date": "2025-09-02",
+      "category_sentiments": {
+        "emerging-tech": 0.62,
+        "ai-ml": 0.67,
+        "cybersecurity": 0.26,
+        "blockchain-web3": 0.67,
+        "robotics": 0.58,
+        "space-tech": 0.66,
+        "quantum-computing": 0.75
+      },
+      "overall_sentiment": 0.6
+    },
+    {
+      "date": "2025-09-02",
+      "category_sentiments": {
+        "ai-ml": 0.64,
+        "emerging-tech": 0.6,
+        "cybersecurity": 0.32,
+        "blockchain-web3": 0.7,
+        "space-tech": 0.68,
+        "robotics": 0.69,
+        "biotech": 0.58
+      },
+      "overall_sentiment": 0.6
     }
   ],
   "daily_stats": {
@@ -59,36 +85,83 @@
     },
     "2025-09-02": {
       "date": "2025-09-02",
-      "total_articles": 156,
+      "total_articles": 522,
       "category_distribution": {
-        "ai-ml": 52,
-        "quantum-computing": 31,
-        "robotics": 22,
-        "blockchain-web3": 18,
-        "cybersecurity": 14,
-        "biotech": 9,
-        "space-tech": 8,
-        "emerging-tech": 2
+        "ai-ml": 279,
+        "emerging-tech": 452,
+        "cybersecurity": 67,
+        "blockchain-web3": 39,
+        "space-tech": 18,
+        "robotics": 14,
+        "biotech": 2
       },
       "top_companies": {
-        "OpenAI": 15,
-        "Google": 12,
-        "Tesla": 9,
-        "Microsoft": 8,
-        "Meta": 7,
-        "Apple": 6
+        "Google": 40,
+        "Microsoft": 26,
+        "Github": 22,
+        "Linux": 21,
+        "Meta": 20,
+        "Intel": 18,
+        "Twitter": 17,
+        "Amazon": 10,
+        "Openai": 8,
+        "Apple": 7
       },
-      "average_sentiment": 0.76,
-      "average_impact": 6.8,
+      "average_sentiment": 0.6,
+      "average_impact": 0.57,
       "source_distribution": {
-        "Hacker News": 38,
-        "TechCrunch": 32,
-        "Reddit r/technology": 28,
-        "The Verge": 22,
-        "Ars Technica": 20,
-        "GitHub Trending": 16
+        "Hacker News": 29,
+        "Reddit r/technology": 10,
+        "Reddit r/programming": 10,
+        "Reddit r/MachineLearning": 10,
+        "Reddit r/artificial": 10,
+        "Reddit r/compsci": 10,
+        "GitHub Trending": 20,
+        "VentureBeat": 10,
+        "Krebs on Security": 10,
+        "Destructoid": 10,
+        "All Content from Business Insider": 10,
+        "darkreading": 10,
+        "Fedora Magazine": 10,
+        "CNET": 10,
+        "BBC News": 10,
+        "React": 10,
+        "Rock Paper Shotgun Latest Articles Feed": 10,
+        "MarketWatch.com - Top Stories": 10,
+        "Articles on Smashing Magazine — For Web Designers And Developers": 20,
+        "Blog": 10,
+        "CISA Cybersecurity Advisories": 10,
+        "MachineLearningMastery.com": 10,
+        "Latest from IMore": 10,
+        "DEV Community": 10,
+        "Latest from Android Central": 10,
+        "DesignFloat | Published News": 10,
+        "Opensource.com": 10,
+        "Schneier on Security": 10,
+        "Siliconera": 10,
+        "Microsoft Research": 10,
+        "Google DeepMind Blog": 10,
+        "Crunch Hype": 10,
+        "Latest from Laptop Mag": 10,
+        "Help Net Security": 10,
+        "Threatpost": 10,
+        "TechCrunch": 10,
+        "PlayStation LifeStyle": 10,
+        "Latest news": 10,
+        "TechRepublic": 10,
+        "Distill": 10,
+        "SitePoint": 10,
+        "ReadWrite": 10,
+        "Android Headlines": 10,
+        "arXiv": 1,
+        "Dev.to (technology)": 10,
+        "Dev.to (programming)": 10,
+        "Dev.to (webdev)": 10,
+        "Dev.to (javascript)": 10,
+        "Dev.to (python)": 10,
+        "Product Hunt": 2
       },
-      "high_impact_articles": 31
+      "high_impact_articles": 0
     }
   }
 }

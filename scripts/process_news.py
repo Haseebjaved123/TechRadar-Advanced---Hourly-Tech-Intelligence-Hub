@@ -54,7 +54,7 @@ class NewsProcessor:
     
     def categorize_article(self, title: str, content: str = "") -> List[str]:
         """Categorize article based on title and content"""
-        text = (title + " " + content).lower()
+        text = ((title or "") + " " + (content or "")).lower()
         categories = []
         
         for category, keywords in self.categories.items():
@@ -71,7 +71,7 @@ class NewsProcessor:
     
     def extract_entities(self, title: str, content: str = "") -> Dict[str, List[str]]:
         """Extract companies and technologies mentioned"""
-        text = (title + " " + content).lower()
+        text = ((title or "") + " " + (content or "")).lower()
         
         mentioned_companies = []
         mentioned_technologies = []
@@ -91,7 +91,7 @@ class NewsProcessor:
     
     def calculate_sentiment(self, title: str, content: str = "") -> float:
         """Simple sentiment analysis (0.0 = negative, 1.0 = positive)"""
-        text = (title + " " + content).lower()
+        text = ((title or "") + " " + (content or "")).lower()
         
         positive_words = [
             'breakthrough', 'revolutionary', 'innovative', 'advanced', 'successful',
@@ -171,7 +171,7 @@ class NewsProcessor:
     
     def extract_keywords(self, title: str, content: str = "") -> List[str]:
         """Extract relevant keywords"""
-        text = (title + " " + content).lower()
+        text = ((title or "") + " " + (content or "")).lower()
         
         # Common tech keywords
         keywords = []
