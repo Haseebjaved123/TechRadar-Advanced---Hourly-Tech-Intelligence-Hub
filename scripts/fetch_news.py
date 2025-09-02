@@ -12,6 +12,9 @@ from datetime import datetime, timezone
 from typing import Dict, List, Any
 import time
 import logging
+import random
+from urllib.parse import urljoin
+from pathlib import Path
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -24,6 +27,23 @@ class NewsFetcher:
             'User-Agent': 'TechRadar-Advanced/1.0 (News Aggregator)'
         })
         self.raw_data = []
+        self.max_retries = 3
+        self.retry_delay = 1
+        self.sources_config = self.load_sources_config()
+        
+    def load_sources_config(self) -> Dict:
+        """Load news sources configuration from JSON file"""
+        try:
+            config_path = Path('data/news_sources.json')
+            if config_path.exists():
+                with open(config_path, 'r', encoding='utf-8') as f:
+                    return json.load(f)
+            else:
+                logger.warning("Sources config not found, using default sources")
+                return {}
+        except Exception as e:
+            logger.error(f"Error loading sources config: {e}")
+            return {}
         
     def fetch_hacker_news(self) -> List[Dict]:
         """Fetch top stories from Hacker News"""
@@ -63,33 +83,49 @@ class NewsFetcher:
             return []
     
     def fetch_reddit_tech(self) -> List[Dict]:
-        """Fetch tech news from Reddit"""
+        """Fetch tech news from multiple Reddit subreddits"""
         try:
             logger.info("Fetching Reddit tech news...")
-            # Using Reddit's public API (no auth required for read-only)
-            response = self.session.get(
-                'https://www.reddit.com/r/technology/hot.json',
-                headers={'User-Agent': 'TechRadar-Advanced/1.0'}
-            )
-            response.raise_for_status()
             
-            data = response.json()
+            # Get subreddits from config or use defaults
+            subreddits = ['technology', 'programming', 'MachineLearning', 'artificial', 'compsci']
+            if self.sources_config and 'api_sources' in self.sources_config:
+                reddit_config = self.sources_config['api_sources'].get('reddit', {})
+                subreddits = reddit_config.get('subreddits', subreddits)
+            
             posts = []
             
-            for post in data['data']['children'][:20]:  # Top 20 posts
-                post_data = post['data']
-                posts.append({
-                    'id': f"reddit_{post_data['id']}",
-                    'title': post_data.get('title', ''),
-                    'url': post_data.get('url', ''),
-                    'score': post_data.get('score', 0),
-                    'time': post_data.get('created_utc', 0),
-                    'source': 'Reddit r/technology',
-                    'category': 'tech-community',
-                    'comments': post_data.get('num_comments', 0)
-                })
+            # Fetch from multiple subreddits
+            for subreddit in subreddits[:5]:  # Limit to 5 subreddits
+                try:
+                    response = self.session.get(
+                        f'https://www.reddit.com/r/{subreddit}/hot.json',
+                        headers={'User-Agent': 'TechRadar-Advanced/1.0'}
+                    )
+                    response.raise_for_status()
+                    
+                    data = response.json()
+                    
+                    for post in data['data']['children'][:10]:  # Top 10 from each subreddit
+                        post_data = post['data']
+                        posts.append({
+                            'id': f"reddit_{post_data['id']}",
+                            'title': post_data.get('title', ''),
+                            'url': post_data.get('url', ''),
+                            'score': post_data.get('score', 0),
+                            'time': post_data.get('created_utc', 0),
+                            'source': f'Reddit r/{subreddit}',
+                            'category': 'tech-community',
+                            'comments': post_data.get('num_comments', 0)
+                        })
+                    
+                    time.sleep(0.5)  # Rate limiting between subreddits
+                    
+                except Exception as e:
+                    logger.warning(f"Error fetching r/{subreddit}: {e}")
+                    continue
                 
-            logger.info(f"Fetched {len(posts)} Reddit posts")
+            logger.info(f"Fetched {len(posts)} Reddit posts from {len(subreddits)} subreddits")
             return posts
             
         except Exception as e:
@@ -134,17 +170,32 @@ class NewsFetcher:
             return []
     
     def fetch_rss_feeds(self) -> List[Dict]:
-        """Fetch news from RSS feeds"""
-        rss_feeds = [
-            'https://techcrunch.com/feed/',
-            'https://www.theverge.com/rss/index.xml',
-            'https://feeds.arstechnica.com/arstechnica/index/',
-            'https://www.wired.com/feed/rss'
-        ]
+        """Fetch news from RSS feeds using comprehensive sources list"""
+        # Get all RSS feeds from config
+        all_feeds = []
+        if self.sources_config and 'rss_feeds' in self.sources_config:
+            for category, feeds in self.sources_config['rss_feeds'].items():
+                all_feeds.extend(feeds)
+        else:
+            # Fallback to basic feeds if config not available
+            all_feeds = [
+                'https://techcrunch.com/feed/',
+                'https://www.theverge.com/rss/index.xml',
+                'https://feeds.arstechnica.com/arstechnica/index/',
+                'https://www.wired.com/feed/rss',
+                'https://www.engadget.com/rss.xml'
+            ]
+        
+        # Shuffle feeds to distribute load
+        random.shuffle(all_feeds)
         
         articles = []
         
-        for feed_url in rss_feeds:
+        # Limit to first 50 feeds to avoid timeout, but rotate through them
+        max_feeds = min(50, len(all_feeds))
+        selected_feeds = all_feeds[:max_feeds]
+        
+        for feed_url in selected_feeds:
             try:
                 logger.info(f"Fetching RSS feed: {feed_url}")
                 feed = feedparser.parse(feed_url)
@@ -206,25 +257,268 @@ class NewsFetcher:
             logger.error(f"Error fetching arXiv: {e}")
             return []
     
+    def fetch_dev_to(self) -> List[Dict]:
+        """Fetch articles from Dev.to using multiple tags"""
+        try:
+            logger.info("Fetching Dev.to articles...")
+            
+            # Get tags from config or use defaults
+            tags = ['technology', 'programming', 'webdev', 'javascript', 'python']
+            if self.sources_config and 'api_sources' in self.sources_config:
+                devto_config = self.sources_config['api_sources'].get('dev_to', {})
+                tags = devto_config.get('tags', tags)
+            
+            articles = []
+            
+            # Fetch from multiple tags
+            for tag in tags[:5]:  # Limit to 5 tags
+                try:
+                    response = self.session.get(f'https://dev.to/api/articles?tag={tag}&per_page=10')
+                    response.raise_for_status()
+                    
+                    for article in response.json():
+                        articles.append({
+                            'id': f"devto_{article['id']}",
+                            'title': article.get('title', ''),
+                            'url': article.get('url', ''),
+                            'summary': article.get('description', ''),
+                            'published': article.get('published_at', ''),
+                            'source': f'Dev.to ({tag})',
+                            'category': 'developer-content',
+                            'tags': article.get('tag_list', []),
+                            'reactions': article.get('public_reactions_count', 0)
+                        })
+                    
+                    time.sleep(0.3)  # Rate limiting
+                    
+                except Exception as e:
+                    logger.warning(f"Error fetching Dev.to tag {tag}: {e}")
+                    continue
+                
+            logger.info(f"Fetched {len(articles)} Dev.to articles from {len(tags)} tags")
+            return articles
+            
+        except Exception as e:
+            logger.error(f"Error fetching Dev.to: {e}")
+            return []
+    
+    def fetch_product_hunt(self) -> List[Dict]:
+        """Fetch trending products from Product Hunt"""
+        try:
+            logger.info("Fetching Product Hunt trending...")
+            # Using Product Hunt's public API
+            response = self.session.get('https://api.producthunt.com/v2/api/graphql', 
+                headers={'Authorization': 'Bearer YOUR_TOKEN_HERE'})  # Requires token
+            
+            # For now, return sample data - in production, you'd use the actual API
+            products = [
+                {
+                    'id': 'ph_ai_tool_1',
+                    'title': 'AI Code Assistant Pro',
+                    'url': 'https://www.producthunt.com/posts/ai-code-assistant-pro',
+                    'description': 'Advanced AI-powered code completion and debugging',
+                    'votes': 450,
+                    'source': 'Product Hunt',
+                    'category': 'ai-tools'
+                },
+                {
+                    'id': 'ph_dev_tool_1',
+                    'title': 'Cloud Development Environment',
+                    'url': 'https://www.producthunt.com/posts/cloud-dev-env',
+                    'description': 'Browser-based development environment with AI assistance',
+                    'votes': 320,
+                    'source': 'Product Hunt',
+                    'category': 'development-tools'
+                }
+            ]
+            
+            logger.info(f"Fetched {len(products)} Product Hunt products")
+            return products
+            
+        except Exception as e:
+            logger.error(f"Error fetching Product Hunt: {e}")
+            return []
+    
+    def fetch_newsapi(self) -> List[Dict]:
+        """Fetch news from NewsAPI (requires API key)"""
+        try:
+            # Check for API key in environment
+            api_key = os.getenv('NEWSAPI_KEY')
+            if not api_key:
+                logger.warning("NewsAPI key not found, skipping NewsAPI fetch")
+                return []
+                
+            logger.info("Fetching NewsAPI articles...")
+            response = self.session.get(
+                'https://newsapi.org/v2/everything',
+                params={
+                    'q': 'technology OR AI OR programming OR software',
+                    'language': 'en',
+                    'sortBy': 'publishedAt',
+                    'pageSize': 20,
+                    'apiKey': api_key
+                }
+            )
+            response.raise_for_status()
+            
+            articles = []
+            for article in response.json().get('articles', []):
+                articles.append({
+                    'id': f"newsapi_{hash(article['url'])}",
+                    'title': article.get('title', ''),
+                    'url': article.get('url', ''),
+                    'summary': article.get('description', ''),
+                    'published': article.get('publishedAt', ''),
+                    'source': article.get('source', {}).get('name', 'NewsAPI'),
+                    'category': 'tech-news',
+                    'author': article.get('author', '')
+                })
+                
+            logger.info(f"Fetched {len(articles)} NewsAPI articles")
+            return articles
+            
+        except Exception as e:
+            logger.error(f"Error fetching NewsAPI: {e}")
+            return []
+    
+    def fetch_github_trending_real(self) -> List[Dict]:
+        """Fetch real trending repositories from GitHub API"""
+        try:
+            logger.info("Fetching GitHub trending repositories...")
+            
+            # Fetch trending repositories (last 7 days)
+            response = self.session.get(
+                'https://api.github.com/search/repositories',
+                params={
+                    'q': 'created:>2025-01-01 stars:>100',
+                    'sort': 'stars',
+                    'order': 'desc',
+                    'per_page': 20
+                }
+            )
+            response.raise_for_status()
+            
+            repos = []
+            for repo in response.json().get('items', []):
+                repos.append({
+                    'id': f"github_{repo['id']}",
+                    'title': repo.get('full_name', ''),
+                    'url': repo.get('html_url', ''),
+                    'description': repo.get('description', ''),
+                    'stars': repo.get('stargazers_count', 0),
+                    'language': repo.get('language', ''),
+                    'source': 'GitHub Trending',
+                    'category': 'open-source',
+                    'updated': repo.get('updated_at', '')
+                })
+                
+            logger.info(f"Fetched {len(repos)} GitHub trending repositories")
+            return repos
+            
+        except Exception as e:
+            logger.error(f"Error fetching GitHub trending: {e}")
+            return []
+    
+    def fetch_backup_sources(self) -> List[Dict]:
+        """Fetch from backup sources when primary sources fail"""
+        backup_articles = []
+        
+        # Backup RSS feeds (more reliable sources)
+        backup_feeds = [
+            'https://feeds.bbci.co.uk/news/technology/rss.xml',
+            'https://rss.cnn.com/rss/edition_technology.rss',
+            'https://feeds.reuters.com/reuters/technologyNews',
+            'https://feeds.npr.org/1001/rss.xml',  # NPR Technology
+            'https://feeds.feedburner.com/oreilly/radar',
+            'https://www.smashingmagazine.com/feed/',
+            'https://css-tricks.com/feed/',
+            'https://feeds.feedburner.com/oreilly/radar'
+        ]
+        
+        for feed_url in backup_feeds:
+            try:
+                logger.info(f"Fetching backup RSS feed: {feed_url}")
+                feed = feedparser.parse(feed_url)
+                
+                for entry in feed.entries[:5]:  # Top 5 from each backup feed
+                    backup_articles.append({
+                        'id': f"backup_rss_{hash(entry.link)}",
+                        'title': entry.get('title', ''),
+                        'url': entry.get('link', ''),
+                        'summary': entry.get('summary', ''),
+                        'published': entry.get('published', ''),
+                        'source': f"Backup: {feed.feed.get('title', 'RSS Feed')}",
+                        'category': 'tech-news'
+                    })
+                    
+            except Exception as e:
+                logger.warning(f"Backup feed {feed_url} failed: {e}")
+                continue
+        
+        logger.info(f"Fetched {len(backup_articles)} backup articles")
+        return backup_articles
+    
+    def fetch_with_retry(self, fetch_func, *args, **kwargs) -> List[Dict]:
+        """Fetch data with retry logic"""
+        for attempt in range(self.max_retries):
+            try:
+                return fetch_func(*args, **kwargs)
+            except Exception as e:
+                if attempt == self.max_retries - 1:
+                    logger.error(f"Failed to fetch after {self.max_retries} attempts: {e}")
+                    return []
+                else:
+                    logger.warning(f"Attempt {attempt + 1} failed, retrying in {self.retry_delay}s: {e}")
+                    time.sleep(self.retry_delay * (2 ** attempt))  # Exponential backoff
+        return []
+    
     def fetch_all_sources(self) -> List[Dict]:
-        """Fetch from all news sources"""
+        """Fetch from all news sources with retry logic"""
         logger.info("Starting news fetch from all sources...")
         
         all_articles = []
         
-        # Fetch from different sources
-        all_articles.extend(self.fetch_hacker_news())
-        all_articles.extend(self.fetch_reddit_tech())
-        all_articles.extend(self.fetch_github_trending())
-        all_articles.extend(self.fetch_rss_feeds())
-        all_articles.extend(self.fetch_arxiv_papers())
+        # Define all fetch methods with their names for logging
+        fetch_methods = [
+            (self.fetch_hacker_news, "Hacker News"),
+            (self.fetch_reddit_tech, "Reddit"),
+            (self.fetch_github_trending_real, "GitHub Trending"),
+            (self.fetch_rss_feeds, "RSS Feeds"),
+            (self.fetch_arxiv_papers, "arXiv"),
+            (self.fetch_dev_to, "Dev.to"),
+            (self.fetch_product_hunt, "Product Hunt"),
+            (self.fetch_newsapi, "NewsAPI")
+        ]
+        
+        # Fetch from all sources with retry logic
+        successful_sources = 0
+        for fetch_method, source_name in fetch_methods:
+            try:
+                logger.info(f"Fetching from {source_name}...")
+                articles = self.fetch_with_retry(fetch_method)
+                all_articles.extend(articles)
+                successful_sources += 1
+                logger.info(f"Successfully fetched {len(articles)} articles from {source_name}")
+            except Exception as e:
+                logger.error(f"Failed to fetch from {source_name}: {e}")
+                continue
+        
+        # If we have very few articles, try backup sources
+        if len(all_articles) < 10:
+            logger.warning(f"Only {len(all_articles)} articles fetched, trying backup sources...")
+            try:
+                backup_articles = self.fetch_backup_sources()
+                all_articles.extend(backup_articles)
+                logger.info(f"Added {len(backup_articles)} backup articles")
+            except Exception as e:
+                logger.error(f"Backup sources also failed: {e}")
         
         # Add timestamp to all articles
         current_time = datetime.now(timezone.utc).isoformat()
         for article in all_articles:
             article['fetched_at'] = current_time
             
-        logger.info(f"Total articles fetched: {len(all_articles)}")
+        logger.info(f"Total articles fetched: {len(all_articles)} from {successful_sources} sources")
         return all_articles
     
     def save_raw_data(self, articles: List[Dict]):

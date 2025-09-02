@@ -87,37 +87,71 @@ techradar-advanced/
 | Weekly Report | Weekly | Sunday 00:00 | Week's major developments |
 | Trend Analysis | Daily | 12:00 | Technology trend report |
 
-## 📰 News Sources
+## 📰 News Sources (150+ Sources)
+
+### 🔥 Enhanced Reliability System
+- **150+ RSS Feeds** across all tech categories
+- **Multiple API Sources** with fallback mechanisms
+- **Retry Logic** with exponential backoff
+- **Backup Sources** when primary sources fail
+- **Rate Limiting** to respect API limits
 
 ### Primary Sources
 - **Research**: ArXiv, Papers with Code, Google Scholar
-- **News**: TechCrunch, The Verge, Ars Technica, Wired
-- **Communities**: Hacker News, Reddit (r/technology, r/programming)
-- **Engineering Blogs**: Google AI, OpenAI, Meta Research, Microsoft Research
+- **News**: TechCrunch, The Verge, Ars Technica, Wired, Engadget, ZDNet
+- **Communities**: Hacker News, Reddit (15+ subreddits), Dev.to
+- **Engineering Blogs**: Google AI, OpenAI, Meta Research, Microsoft Research, AWS, Azure
 - **Repositories**: GitHub Trending, GitLab Trending
 - **Patents**: USPTO Tech Patents, Google Patents
 
 ### Specialized Sources
-- **AI/ML**: Hugging Face, ML News, AI News
+- **AI/ML**: Hugging Face, ML News, AI News, TensorFlow, PyTorch
 - **Quantum**: Quantum Computing Report, IBM Quantum Network
-- **Security**: Krebs on Security, The Hacker News
-- **Startups**: Product Hunt, TechCrunch Disrupt
+- **Security**: Krebs on Security, The Hacker News, Dark Reading
+- **Startups**: Product Hunt, TechCrunch Disrupt, VentureBeat
+- **Mobile**: Android Central, iMore, 9to5Mac, XDA Developers
+- **Gaming**: Polygon, Kotaku, IGN, Eurogamer
+- **Open Source**: Linux.com, Red Hat, Canonical, Mozilla
+
+### Backup Sources
+- **Major News**: BBC Technology, CNN Technology, Reuters
+- **Developer**: Stack Overflow, Smashing Magazine, CSS-Tricks
+- **Design**: A List Apart, SitePoint, Web Designer Depot
 
 ## 🚀 Quick Start
 
-### Use the Data
+### Enhanced Setup (Recommended)
 ```bash
 # Clone the repository
 git clone https://github.com/Haseebjaved123/TechRadar-Advanced---Hourly-Tech-Intelligence-Hub.git
+cd TechRadar-Advanced---Hourly-Tech-Intelligence-Hub
 
+# Install dependencies
+pip install -r requirements.txt
+
+# Setup API keys for enhanced reliability (optional but recommended)
+python scripts/setup_api_keys.py
+
+# Test all sources
+python scripts/test_sources.py
+
+# Run a manual fetch
+python scripts/fetch_news.py
+```
+
+### Use the Data
+```bash
 # Navigate to today's updates
-cd TechRadar-Advanced---Hourly-Tech-Intelligence-Hub/today
+cd today
 
 # View latest news
 cat latest.md
 
 # Search historical data
 grep -r "quantum computing" archives/
+
+# Check source test results
+cat data/source_test_results.json
 ```
 
 ### Subscribe to Updates
