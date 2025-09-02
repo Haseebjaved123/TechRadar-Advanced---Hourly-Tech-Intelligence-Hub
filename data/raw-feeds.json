@@ -1,0 +1,59 @@
+{
+  "timestamp": "2025-09-02T13:00:00Z",
+  "total_articles": 15,
+  "sources": [
+    "Hacker News",
+    "Reddit r/technology",
+    "GitHub Trending",
+    "TechCrunch",
+    "arXiv"
+  ],
+  "articles": [
+    {
+      "id": "hn_12345678",
+      "title": "OpenAI Announces GPT-5 Architecture with Revolutionary Efficiency",
+      "url": "https://openai.com/blog/gpt-5-announcement",
+      "score": 2847,
+      "time": 1725278400,
+      "source": "Hacker News",
+      "category": "tech-community"
+    },
+    {
+      "id": "reddit_abc123",
+      "title": "Quantum Breakthrough: Room Temperature Superconductor Validated by Nature",
+      "url": "https://reddit.com/r/technology/comments/quantum-breakthrough",
+      "score": 15420,
+      "time": 1725277800,
+      "source": "Reddit r/technology",
+      "category": "tech-community",
+      "comments": 892
+    },
+    {
+      "id": "github_trending_1",
+      "title": "facebook/react-quantum",
+      "url": "https://github.com/facebook/react-quantum",
+      "description": "Quantum computing simulation in browser",
+      "stars": 2300,
+      "source": "GitHub Trending",
+      "category": "open-source"
+    },
+    {
+      "id": "rss_techcrunch_1",
+      "title": "Tesla's Optimus Robot Achieves AGI-Level Task Planning",
+      "url": "https://techcrunch.com/tesla-optimus-agi",
+      "summary": "Tesla's humanoid robot demonstrates advanced reasoning capabilities in unstructured environments.",
+      "published": "Mon, 02 Sep 2025 12:30:00 GMT",
+      "source": "TechCrunch",
+      "category": "tech-news"
+    },
+    {
+      "id": "arxiv_2501.12345",
+      "title": "Attention is Not All You Need: A New Architecture for Language Models",
+      "url": "https://arxiv.org/abs/2501.12345",
+      "authors": "Smith, J. et al.",
+      "published": "2025-01-15",
+      "source": "arXiv",
+      "category": "research"
+    }
+  ]
+}

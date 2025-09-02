@@ -1,0 +1,75 @@
+{
+  "timestamp": "2025-09-02T13:00:00Z",
+  "trending_topics": [
+    {
+      "topic": "Quantum Computing",
+      "mentions": 47,
+      "change": "+45%",
+      "sentiment": 0.85,
+      "key_articles": [
+        "Room Temperature Superconductor Validated",
+        "IBM Quantum Network Expansion",
+        "Google's Quantum Supremacy 2.0"
+      ]
+    },
+    {
+      "topic": "GPT-5/LLMs",
+      "mentions": 38,
+      "change": "+23%",
+      "sentiment": 0.72,
+      "key_articles": [
+        "OpenAI GPT-5 Architecture Announced",
+        "Meta's Llama 3.5 Release",
+        "Google's Gemini Ultra Update"
+      ]
+    },
+    {
+      "topic": "Neuromorphic Chips",
+      "mentions": 24,
+      "change": "+190%",
+      "sentiment": 0.90,
+      "key_articles": [
+        "Google's 1000x Energy Efficiency Breakthrough",
+        "Intel's Loihi 3 Chip",
+        "Brain-Inspired Computing Revolution"
+      ]
+    },
+    {
+      "topic": "Web3/Blockchain",
+      "mentions": 19,
+      "change": "-12%",
+      "sentiment": 0.45,
+      "key_articles": [
+        "Ethereum Layer 2 Breakthrough",
+        "Solana's New Consensus Mechanism",
+        "DeFi Security Improvements"
+      ]
+    },
+    {
+      "topic": "Robotics",
+      "mentions": 16,
+      "change": "+8%",
+      "sentiment": 0.68,
+      "key_articles": [
+        "Tesla Optimus AGI-Level Planning",
+        "Boston Dynamics New Robot",
+        "Robotic Surgery Advances"
+      ]
+    }
+  ],
+  "top_companies": [
+    {"name": "OpenAI", "mentions": 32, "sentiment": 0.78},
+    {"name": "Google", "mentions": 28, "sentiment": 0.82},
+    {"name": "Meta", "mentions": 21, "sentiment": 0.65},
+    {"name": "Microsoft", "mentions": 19, "sentiment": 0.71},
+    {"name": "Tesla", "mentions": 15, "sentiment": 0.69},
+    {"name": "Apple", "mentions": 13, "sentiment": 0.73}
+  ],
+  "emerging_technologies": [
+    "DNA Storage",
+    "Quantum Internet",
+    "Neural Interfaces",
+    "Space-Based Computing",
+    "Biocomputing"
+  ]
+}

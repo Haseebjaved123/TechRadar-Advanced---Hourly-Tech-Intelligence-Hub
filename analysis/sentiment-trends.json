@@ -1,0 +1,94 @@
+{
+  "trends": [
+    {
+      "date": "2025-09-01",
+      "category_sentiments": {
+        "ai-ml": 0.78,
+        "quantum-computing": 0.82,
+        "robotics": 0.71,
+        "blockchain-web3": 0.45,
+        "cybersecurity": 0.65
+      },
+      "overall_sentiment": 0.68
+    },
+    {
+      "date": "2025-09-02",
+      "category_sentiments": {
+        "ai-ml": 0.85,
+        "quantum-computing": 0.92,
+        "robotics": 0.88,
+        "blockchain-web3": 0.48,
+        "cybersecurity": 0.67
+      },
+      "overall_sentiment": 0.76
+    }
+  ],
+  "daily_stats": {
+    "2025-09-01": {
+      "date": "2025-09-01",
+      "total_articles": 142,
+      "category_distribution": {
+        "ai-ml": 45,
+        "quantum-computing": 23,
+        "robotics": 18,
+        "blockchain-web3": 15,
+        "cybersecurity": 12,
+        "biotech": 8,
+        "space-tech": 7,
+        "emerging-tech": 14
+      },
+      "top_companies": {
+        "OpenAI": 12,
+        "Google": 10,
+        "Microsoft": 8,
+        "Tesla": 7,
+        "Meta": 6,
+        "Apple": 5
+      },
+      "average_sentiment": 0.68,
+      "average_impact": 6.2,
+      "source_distribution": {
+        "Hacker News": 35,
+        "TechCrunch": 28,
+        "Reddit r/technology": 25,
+        "The Verge": 20,
+        "Ars Technica": 18,
+        "GitHub Trending": 16
+      },
+      "high_impact_articles": 23
+    },
+    "2025-09-02": {
+      "date": "2025-09-02",
+      "total_articles": 156,
+      "category_distribution": {
+        "ai-ml": 52,
+        "quantum-computing": 31,
+        "robotics": 22,
+        "blockchain-web3": 18,
+        "cybersecurity": 14,
+        "biotech": 9,
+        "space-tech": 8,
+        "emerging-tech": 2
+      },
+      "top_companies": {
+        "OpenAI": 15,
+        "Google": 12,
+        "Tesla": 9,
+        "Microsoft": 8,
+        "Meta": 7,
+        "Apple": 6
+      },
+      "average_sentiment": 0.76,
+      "average_impact": 6.8,
+      "source_distribution": {
+        "Hacker News": 38,
+        "TechCrunch": 32,
+        "Reddit r/technology": 28,
+        "The Verge": 22,
+        "Ars Technica": 20,
+        "GitHub Trending": 16
+      },
+      "high_impact_articles": 31
+    }
+  }
+}

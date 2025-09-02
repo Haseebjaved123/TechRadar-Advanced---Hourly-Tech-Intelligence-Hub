@@ -1,0 +1,122 @@
+{
+  "timestamp": "2025-09-02T13:00:00Z",
+  "total_articles": 15,
+  "articles": [
+    {
+      "id": "hn_12345678",
+      "timestamp": "2025-09-02T13:00:00Z",
+      "title": "OpenAI Announces GPT-5 Architecture with Revolutionary Efficiency",
+      "source": "Hacker News",
+      "url": "https://openai.com/blog/gpt-5-announcement",
+      "categories": ["ai-ml"],
+      "companies": ["OpenAI"],
+      "technologies": ["GPT-5", "LLM", "Transformers"],
+      "sentiment": 0.85,
+      "impact_score": 9.2,
+      "summary": "OpenAI reveals GPT-5 with 10x parameter efficiency and new reasoning capabilities.",
+      "keywords": ["ai", "gpt", "llm", "breakthrough", "announcement"],
+      "original_data": {
+        "id": "hn_12345678",
+        "title": "OpenAI Announces GPT-5 Architecture with Revolutionary Efficiency",
+        "url": "https://openai.com/blog/gpt-5-announcement",
+        "score": 2847,
+        "time": 1725278400,
+        "source": "Hacker News",
+        "category": "tech-community"
+      }
+    },
+    {
+      "id": "reddit_abc123",
+      "timestamp": "2025-09-02T13:00:00Z",
+      "title": "Quantum Breakthrough: Room Temperature Superconductor Validated by Nature",
+      "source": "Reddit r/technology",
+      "url": "https://reddit.com/r/technology/comments/quantum-breakthrough",
+      "categories": ["quantum-computing"],
+      "companies": ["IBM", "Google"],
+      "technologies": ["Quantum Computing", "Superconductor"],
+      "sentiment": 0.92,
+      "impact_score": 8.8,
+      "summary": "Revolutionary material achieves superconductivity at 15°C, validated by peer review.",
+      "keywords": ["quantum", "superconductor", "breakthrough", "research"],
+      "original_data": {
+        "id": "reddit_abc123",
+        "title": "Quantum Breakthrough: Room Temperature Superconductor Validated by Nature",
+        "url": "https://reddit.com/r/technology/comments/quantum-breakthrough",
+        "score": 15420,
+        "time": 1725277800,
+        "source": "Reddit r/technology",
+        "category": "tech-community",
+        "comments": 892
+      }
+    },
+    {
+      "id": "github_trending_1",
+      "timestamp": "2025-09-02T13:00:00Z",
+      "title": "facebook/react-quantum",
+      "source": "GitHub Trending",
+      "url": "https://github.com/facebook/react-quantum",
+      "categories": ["quantum-computing", "open-source"],
+      "companies": ["Facebook", "Meta"],
+      "technologies": ["React", "Quantum Computing", "JavaScript"],
+      "sentiment": 0.78,
+      "impact_score": 7.5,
+      "summary": "Quantum computing simulation library for React applications.",
+      "keywords": ["react", "quantum", "javascript", "simulation"],
+      "original_data": {
+        "id": "github_trending_1",
+        "title": "facebook/react-quantum",
+        "url": "https://github.com/facebook/react-quantum",
+        "description": "Quantum computing simulation in browser",
+        "stars": 2300,
+        "source": "GitHub Trending",
+        "category": "open-source"
+      }
+    },
+    {
+      "id": "rss_techcrunch_1",
+      "timestamp": "2025-09-02T13:00:00Z",
+      "title": "Tesla's Optimus Robot Achieves AGI-Level Task Planning",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/tesla-optimus-agi",
+      "categories": ["robotics", "ai-ml"],
+      "companies": ["Tesla"],
+      "technologies": ["AGI", "Robotics", "AI"],
+      "sentiment": 0.88,
+      "impact_score": 8.5,
+      "summary": "Tesla's humanoid robot demonstrates advanced reasoning capabilities in unstructured environments.",
+      "keywords": ["tesla", "robot", "agi", "automation"],
+      "original_data": {
+        "id": "rss_techcrunch_1",
+        "title": "Tesla's Optimus Robot Achieves AGI-Level Task Planning",
+        "url": "https://techcrunch.com/tesla-optimus-agi",
+        "summary": "Tesla's humanoid robot demonstrates advanced reasoning capabilities in unstructured environments.",
+        "published": "Mon, 02 Sep 2025 12:30:00 GMT",
+        "source": "TechCrunch",
+        "category": "tech-news"
+      }
+    },
+    {
+      "id": "arxiv_2501.12345",
+      "timestamp": "2025-09-02T13:00:00Z",
+      "title": "Attention is Not All You Need: A New Architecture for Language Models",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2501.12345",
+      "categories": ["ai-ml", "research"],
+      "companies": ["Google", "OpenAI"],
+      "technologies": ["Transformers", "Attention", "LLM"],
+      "sentiment": 0.75,
+      "impact_score": 7.8,
+      "summary": "New neural architecture that moves beyond transformer attention mechanisms.",
+      "keywords": ["attention", "transformer", "research", "architecture"],
+      "original_data": {
+        "id": "arxiv_2501.12345",
+        "title": "Attention is Not All You Need: A New Architecture for Language Models",
+        "url": "https://arxiv.org/abs/2501.12345",
+        "authors": "Smith, J. et al.",
+        "published": "2025-01-15",
+        "source": "arXiv",
+        "category": "research"
+      }
+    }
+  ]
+}
